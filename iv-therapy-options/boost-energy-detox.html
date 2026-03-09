@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boost Energy &amp; Detox | HYDR8AZ IVs & MedSpa</title>
+    <meta name="description" content="Boost Energy &amp; Detox IV is a revitalizing formula that combats fatigue while clearing toxins that can bog down your system.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'hydr8': {
+                            50: '#ececfb',
+                            100: '#d5d5f7',
+                            200: '#ababef',
+                            300: '#8888e7',
+                            400: '#6565e5',
+                            500: '#4949a6',
+                            600: '#3a3a85',
+                            700: '#2c2c64',
+                            800: '#222222',
+                            900: '#1a1a1a',
+                        },
+                        'coral': '#E67373',
+                        'coral-dark': '#AA3C3C',
+                        'surface': '#F7F7F7',
+                    },
+                    fontFamily: {
+                        'sans': ['"Open Sans"', 'sans-serif'],
+                        'display': ['"Playfair Display"', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(101,101,229,0.15);
+        }
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.2s ease;
+        }
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-hydr8-900 font-sans antialiased">
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-white/80 border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="../index.html" class="flex-shrink-0">
+                    <span class='text-2xl font-bold tracking-tight'><span class='text-hydr8-400'>HYDR8</span><span class='text-hydr8-900'>AZ</span></span>
+                </a>
+                <div class="hidden lg:flex items-center gap-1">
+                    <div class="dropdown relative">
+                        <button class="px-4 py-2 text-sm font-semibold text-hydr8-900 hover:text-hydr8-400 transition-colors flex items-center gap-1">
+                            IV Therapy
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 mt-1">
+                            <a href="../iv-therapy-options.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">All IV Therapy Options</a>
+                            <a href="../injections-iv-add-ins.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Vitamin Shots & Add-Ins</a>
+                            <a href="../help-me-choose.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Help Me Choose</a>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <button class="px-4 py-2 text-sm font-semibold text-hydr8-900 hover:text-hydr8-400 transition-colors flex items-center gap-1">
+                            MedSpa Services
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 w-72 bg-white rounded-xl shadow-xl border border-gray-100 py-2 mt-1">
+                            <a href="../services/alma-opus-plasma-skin-rejuvenation.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Alma Opus Plasma Rejuvenation</a>
+                            <a href="../services/alma-lmnt.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Alma LMNT+</a>
+                            <a href="../services/resurface-rf-skin-resurfacing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">ResuRface RF Skin Resurfacing</a>
+                            <a href="../services/opus-colibri-eye-lift-lesion-removal.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Opus Colibri Eye Lift</a>
+                            <a href="../services/sauna-detox-slimming-wrap.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Sauna Detox & Slimming Wrap</a>
+                            <a href="../services/targeted-led-light-therapy.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">LED Light Therapy</a>
+                            <a href="../services/vacuum-therapy-booty-breast-enhancement.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Vacuum Therapy Enhancement</a>
+                            <a href="../services/wood-therapy-body-shaping.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Wood Therapy Body Shaping</a>
+                            <a href="../services/yeso-therapy-body-wraps.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Yeso-Therapy Body Wraps</a>
+                            <a href="../services/cbd-professional-skincare-line.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">CBD+ Skincare Line</a>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <button class="px-4 py-2 text-sm font-semibold text-hydr8-900 hover:text-hydr8-400 transition-colors flex items-center gap-1">
+                            Shop
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 mt-1">
+                            <a href="../services/lmnt-electrolyte-packet.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">LMNT Electrolyte Packets</a>
+                            <a href="../services/patchaid-vitamin-patches.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">PatchAid Vitamin Patches</a>
+                        </div>
+                    </div>
+                    <a href="../about.html" class="px-4 py-2 text-sm font-semibold text-hydr8-900 hover:text-hydr8-400 transition-colors">About</a>
+                    <a href="../contact.html" class="px-4 py-2 text-sm font-semibold text-hydr8-900 hover:text-hydr8-400 transition-colors">Contact</a>
+                </div>
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="tel:9287337776" class="text-sm font-semibold text-hydr8-400 hover:text-hydr8-500 transition-colors">(928) 733-7776</a>
+                    <a href="../contact.html" class="bg-hydr8-400 hover:bg-hydr8-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-colors shadow-lg shadow-hydr8-400/25">Book Now</a>
+                </div>
+                <button id="mobileMenuBtn" class="lg:hidden p-2 text-hydr8-900">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div id="mobileMenu" class="mobile-menu fixed inset-y-0 right-0 w-80 bg-white z-50 shadow-2xl overflow-y-auto">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-8">
+                <span class='text-2xl font-bold tracking-tight'><span class='text-hydr8-400'>HYDR8</span><span class='text-hydr8-900'>AZ</span></span>
+                <button id="mobileMenuClose" class="p-2 text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <div class="space-y-1">
+                <div class="text-xs font-bold text-gray-400 uppercase tracking-wider px-3 py-2">IV Therapy</div>
+                <a href="../iv-therapy-options.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">All IV Therapy Options</a>
+                <a href="../injections-iv-add-ins.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">Vitamin Shots & Add-Ins</a>
+                <a href="../help-me-choose.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">Help Me Choose</a>
+                <div class="text-xs font-bold text-gray-400 uppercase tracking-wider px-3 py-2 mt-4">MedSpa</div>
+                <a href="../services/alma-opus-plasma-skin-rejuvenation.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">Alma Opus Plasma</a>
+                <a href="../services/alma-lmnt.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">Alma LMNT+</a>
+                <a href="../services/resurface-rf-skin-resurfacing.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">ResuRface RF</a>
+                <a href="../services/sauna-detox-slimming-wrap.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">Sauna Detox Wrap</a>
+                <a href="../services/targeted-led-light-therapy.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">LED Light Therapy</a>
+                <div class="text-xs font-bold text-gray-400 uppercase tracking-wider px-3 py-2 mt-4">More</div>
+                <a href="../about.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">About Us</a>
+                <a href="../contact.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">Contact</a>
+            </div>
+            <div class="mt-8 space-y-3">
+                <a href="tel:9287337776" class="block text-center text-hydr8-400 font-semibold">(928) 733-7776</a>
+                <a href="../contact.html" class="block bg-hydr8-400 text-white text-center py-3 rounded-full font-semibold">Book Now</a>
+            </div>
+        </div>
+    </div>
+    <div id="mobileOverlay" class="hidden fixed inset-0 bg-black/50 z-40"></div>
+    
+    <section class="pt-40 pb-16 px-4 bg-gradient-to-br from-hydr8-100 via-white to-hydr8-50">
+        <div class="max-w-5xl mx-auto text-center fade-up">
+            <h1 class="font-display text-4xl md:text-6xl font-bold text-hydr8-900 mb-6">Boost Energy &amp; Detox</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Boost Energy &amp; Detox IV is a revitalizing formula that combats fatigue while clearing toxins that can bog down your system.</p>
+        </div>
+    </section>
+    <main class="py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class='grid lg:grid-cols-3 gap-10'>
+                <div class='lg:col-span-2 space-y-10 fade-up'>
+                    <section class='bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100'>
+                        <h2 class='font-display text-3xl font-bold text-hydr8-900 mb-6'>Boost Energy &amp; Detox</h2>
+                        <p class='text-lg text-gray-600 leading-relaxed mb-5'>Boost Energy &amp; Detox IV is a revitalizing formula that combats fatigue while clearing toxins that can bog down your system.</p><p class='text-lg text-gray-600 leading-relaxed mb-5'>Recommended for those dealing with low energy, sluggishness, poor concentration, or frequent environmental toxin exposure.</p>
+                    </section>
+                    <section class='bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100'>
+                        <h2 class='font-display text-3xl font-bold text-hydr8-900 mb-6'>Benefits</h2>
+                        <ul class='space-y-4'><li class='flex items-start gap-3 text-gray-700'><svg class='w-5 h-5 text-hydr8-400 mt-0.5 flex-shrink-0' fill='currentColor' viewBox='0 0 20 20'><path fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/></svg><span>Recharges energy at the cellular level</span></li><li class='flex items-start gap-3 text-gray-700'><svg class='w-5 h-5 text-hydr8-400 mt-0.5 flex-shrink-0' fill='currentColor' viewBox='0 0 20 20'><path fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/></svg><span>Flushes toxins from the liver and bloodstream</span></li><li class='flex items-start gap-3 text-gray-700'><svg class='w-5 h-5 text-hydr8-400 mt-0.5 flex-shrink-0' fill='currentColor' viewBox='0 0 20 20'><path fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/></svg><span>Strengthens immune defenses</span></li><li class='flex items-start gap-3 text-gray-700'><svg class='w-5 h-5 text-hydr8-400 mt-0.5 flex-shrink-0' fill='currentColor' viewBox='0 0 20 20'><path fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/></svg><span>Improves hydration and mental alertness</span></li></ul>
+                    </section>
+                    
+                <div class='bg-hydr8-50 rounded-2xl p-8 border border-hydr8-100'>
+                    <h2 class='font-display text-3xl font-bold text-hydr8-900 mb-4'>Key ingredients</h2>
+                    <p class='text-gray-700 leading-relaxed'>Typically includes B-complex vitamins, glutathione, vitamin C, and saline solution for hydration support.</p>
+                </div>
+        
+                </div>
+                <aside class='fade-up'>
+                    <div class='bg-hydr8-800 text-white rounded-3xl p-8 sticky top-28'>
+                        <h3 class='font-display text-3xl font-bold mb-4'>Boost Energy &amp; Detox</h3>
+                        <p class='text-white/70 mb-8'>Book Now</p>
+                        <a href='../contact.html' class='block text-center bg-hydr8-400 hover:bg-hydr8-500 text-white px-6 py-3 rounded-full font-semibold transition-colors'>Book Now</a>
+                        <div class='mt-6 text-center'>
+                            <a href='tel:9287337776' class='text-hydr8-200 hover:text-white transition-colors'>(928) 733-7776</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+    </div>
+    </main>
+
+    <footer class="bg-hydr8-800 text-white pt-16 pb-8 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <span class='text-2xl font-bold tracking-tight'><span class='text-hydr8-400'>HYDR8</span><span class='text-hydr8-900'>AZ</span></span>
+                    <p class="text-sm text-white/50 leading-relaxed mt-4">Premier IV therapy and medspa services in Lake Havasu City, Arizona. Mobile IVs delivered anywhere in Havasu.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-white/70 mb-4">Contact Us</h4>
+                    <div class="space-y-3 text-sm text-white/50">
+                        <p>205 English Village<br>1440 McCulloch Blvd N<br>Lake Havasu City, AZ 86403</p>
+                        <p><a href="tel:9287337776" class="hover:text-white transition-colors">(928) 733-7776</a></p>
+                        <p><a href="mailto:Hydr8AZ@gmail.com" class="hover:text-white transition-colors">Hydr8AZ@gmail.com</a></p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-white/70 mb-4">Quick Links</h4>
+                    <div class="space-y-2 text-sm">
+                        <a href="../iv-therapy-options.html" class="block text-white/50 hover:text-white transition-colors">IV Therapy Options</a>
+                        <a href="../services/alma-opus-plasma-skin-rejuvenation.html" class="block text-white/50 hover:text-white transition-colors">MedSpa Services</a>
+                        <a href="../help-me-choose.html" class="block text-white/50 hover:text-white transition-colors">Help Me Choose</a>
+                        <a href="../about.html" class="block text-white/50 hover:text-white transition-colors">About Us</a>
+                        <a href="../contact.html" class="block text-white/50 hover:text-white transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-white/70 mb-4">Hours</h4>
+                    <div class="space-y-2 text-sm text-white/50">
+                        <p><span class="text-white/70">Mobile IVs:</span> 7am – 7pm Daily</p>
+                        <p><span class="text-white/70">MedSpa:</span> 12pm – 4pm Daily</p>
+                        <p class="text-white/40">After-hours available by appointment</p>
+                    </div>
+                    <div class="flex gap-3 mt-6">
+                        <a href="https://www.facebook.com/Hydr8AZIVs/" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/hydr8az_ivs_and_medspa/" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="https://www.yelp.com/biz/hydr8az-ivs-and-med-spa-lake-havasu-city-2" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.16 12.594l-4.995 1.433c-.96.276-1.74-.8-1.176-1.63l2.998-4.404c.564-.828 1.896-.444 1.896.546v3.51c0 .22-.06.43-.17.612-.11.18-.27.32-.46.4l-.093.033zM13.235 8.818l2.998 4.404c.564.83-.216 1.906-1.176 1.63l-4.995-1.433a1.045 1.045 0 01-.553-.4 1.034 1.034 0 01-.17-.612V8.898c0-.99 1.332-1.374 1.896-.546v.466z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-white/30">© 2026 HYDR8AZ IVs & MedSpa. All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-white/30">
+                    <a href="../privacy-policy.html" class="hover:text-white/50 transition-colors">Privacy Policy</a>
+                    <a href="../terms-conditions.html" class="hover:text-white/50 transition-colors">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+
+        function openMenu() {
+            mobileMenu.classList.add('open');
+            mobileOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            mobileMenu.classList.remove('open');
+            mobileOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openMenu);
+        mobileMenuClose.addEventListener('click', closeMenu);
+        mobileOverlay.addEventListener('click', closeMenu);
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'shadow-sm');
+                nav.classList.remove('bg-white/80');
+            } else {
+                nav.classList.remove('bg-white/95', 'shadow-sm');
+                nav.classList.add('bg-white/80');
+            }
+        });
+    </script>
+</body>
+</html>

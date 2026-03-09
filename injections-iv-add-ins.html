@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamin Infusion Shots & IV Add Ins | HYDR8AZ IVs & MedSpa</title>
+    <meta name="description" content="Vitamin Infusion Shots & IV Add Ins">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'hydr8': {
+                            50: '#ececfb',
+                            100: '#d5d5f7',
+                            200: '#ababef',
+                            300: '#8888e7',
+                            400: '#6565e5',
+                            500: '#4949a6',
+                            600: '#3a3a85',
+                            700: '#2c2c64',
+                            800: '#222222',
+                            900: '#1a1a1a',
+                        },
+                        'coral': '#E67373',
+                        'coral-dark': '#AA3C3C',
+                        'surface': '#F7F7F7',
+                    },
+                    fontFamily: {
+                        'sans': ['"Open Sans"', 'sans-serif'],
+                        'display': ['"Playfair Display"', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(101,101,229,0.15);
+        }
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.2s ease;
+        }
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-hydr8-900 font-sans antialiased">
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-white/80 border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex-shrink-0">
+                    <span class='text-2xl font-bold tracking-tight'><span class='text-hydr8-400'>HYDR8</span><span class='text-hydr8-900'>AZ</span></span>
+                </a>
+                <div class="hidden lg:flex items-center gap-1">
+                    <div class="dropdown relative">
+                        <button class="px-4 py-2 text-sm font-semibold text-hydr8-900 hover:text-hydr8-400 transition-colors flex items-center gap-1">
+                            IV Therapy
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 mt-1">
+                            <a href="iv-therapy-options.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">All IV Therapy Options</a>
+                            <a href="injections-iv-add-ins.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Vitamin Shots & Add-Ins</a>
+                            <a href="help-me-choose.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Help Me Choose</a>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <button class="px-4 py-2 text-sm font-semibold text-hydr8-900 hover:text-hydr8-400 transition-colors flex items-center gap-1">
+                            MedSpa Services
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 w-72 bg-white rounded-xl shadow-xl border border-gray-100 py-2 mt-1">
+                            <a href="services/alma-opus-plasma-skin-rejuvenation.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Alma Opus Plasma Rejuvenation</a>
+                            <a href="services/alma-lmnt.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Alma LMNT+</a>
+                            <a href="services/resurface-rf-skin-resurfacing.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">ResuRface RF Skin Resurfacing</a>
+                            <a href="services/opus-colibri-eye-lift-lesion-removal.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Opus Colibri Eye Lift</a>
+                            <a href="services/sauna-detox-slimming-wrap.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Sauna Detox & Slimming Wrap</a>
+                            <a href="services/targeted-led-light-therapy.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">LED Light Therapy</a>
+                            <a href="services/vacuum-therapy-booty-breast-enhancement.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Vacuum Therapy Enhancement</a>
+                            <a href="services/wood-therapy-body-shaping.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Wood Therapy Body Shaping</a>
+                            <a href="services/yeso-therapy-body-wraps.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">Yeso-Therapy Body Wraps</a>
+                            <a href="services/cbd-professional-skincare-line.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">CBD+ Skincare Line</a>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <button class="px-4 py-2 text-sm font-semibold text-hydr8-900 hover:text-hydr8-400 transition-colors flex items-center gap-1">
+                            Shop
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 mt-1">
+                            <a href="services/lmnt-electrolyte-packet.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">LMNT Electrolyte Packets</a>
+                            <a href="services/patchaid-vitamin-patches.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-hydr8-50 hover:text-hydr8-400 transition-colors">PatchAid Vitamin Patches</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="px-4 py-2 text-sm font-semibold text-hydr8-900 hover:text-hydr8-400 transition-colors">About</a>
+                    <a href="contact.html" class="px-4 py-2 text-sm font-semibold text-hydr8-900 hover:text-hydr8-400 transition-colors">Contact</a>
+                </div>
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="tel:9287337776" class="text-sm font-semibold text-hydr8-400 hover:text-hydr8-500 transition-colors">(928) 733-7776</a>
+                    <a href="contact.html" class="bg-hydr8-400 hover:bg-hydr8-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-colors shadow-lg shadow-hydr8-400/25">Book Now</a>
+                </div>
+                <button id="mobileMenuBtn" class="lg:hidden p-2 text-hydr8-900">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div id="mobileMenu" class="mobile-menu fixed inset-y-0 right-0 w-80 bg-white z-50 shadow-2xl overflow-y-auto">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-8">
+                <span class='text-2xl font-bold tracking-tight'><span class='text-hydr8-400'>HYDR8</span><span class='text-hydr8-900'>AZ</span></span>
+                <button id="mobileMenuClose" class="p-2 text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <div class="space-y-1">
+                <div class="text-xs font-bold text-gray-400 uppercase tracking-wider px-3 py-2">IV Therapy</div>
+                <a href="iv-therapy-options.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">All IV Therapy Options</a>
+                <a href="injections-iv-add-ins.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">Vitamin Shots & Add-Ins</a>
+                <a href="help-me-choose.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">Help Me Choose</a>
+                <div class="text-xs font-bold text-gray-400 uppercase tracking-wider px-3 py-2 mt-4">MedSpa</div>
+                <a href="services/alma-opus-plasma-skin-rejuvenation.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">Alma Opus Plasma</a>
+                <a href="services/alma-lmnt.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">Alma LMNT+</a>
+                <a href="services/resurface-rf-skin-resurfacing.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">ResuRface RF</a>
+                <a href="services/sauna-detox-slimming-wrap.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">Sauna Detox Wrap</a>
+                <a href="services/targeted-led-light-therapy.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">LED Light Therapy</a>
+                <div class="text-xs font-bold text-gray-400 uppercase tracking-wider px-3 py-2 mt-4">More</div>
+                <a href="about.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">About Us</a>
+                <a href="contact.html" class="block px-3 py-2.5 text-gray-700 hover:bg-hydr8-50 rounded-lg">Contact</a>
+            </div>
+            <div class="mt-8 space-y-3">
+                <a href="tel:9287337776" class="block text-center text-hydr8-400 font-semibold">(928) 733-7776</a>
+                <a href="contact.html" class="block bg-hydr8-400 text-white text-center py-3 rounded-full font-semibold">Book Now</a>
+            </div>
+        </div>
+    </div>
+    <div id="mobileOverlay" class="hidden fixed inset-0 bg-black/50 z-40"></div>
+    
+    <section class="pt-40 pb-16 px-4 bg-gradient-to-br from-hydr8-100 via-white to-hydr8-50">
+        <div class="max-w-5xl mx-auto text-center fade-up">
+            <h1 class="font-display text-4xl md:text-6xl font-bold text-hydr8-900 mb-6">Vitamin Infusion Shots &amp; IV Add Ins</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Discover More</p>
+        </div>
+    </section>
+    <main class="py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+    <section class='text-center max-w-4xl mx-auto mb-14 fade-up'>
+        <h2 class='font-display text-4xl font-bold text-hydr8-900 mb-4'>Vitamin Infusion Shots &amp; IV Add Ins</h2>
+        <p class='text-lg text-gray-600'>Discover More</p>
+    </section>
+    <section class='grid md:grid-cols-2 gap-6 fade-up'>
+        
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Allergy Shots</h3>
+            <p class='text-gray-600 mb-4'>Allergy shots help train the immune system to respond less aggressively to allergens such as pollen, dust, and pet dander. They are commonly used for long-term relief of seasonal or environmental allergies. Ideal for individuals who experience chronic allergy symptoms that interfere with daily life or sleep quality.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Seasonal allergy relief</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Sinus inflammation</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Immune support</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Alpha Lipoic Acid</h3>
+            <p class='text-gray-600 mb-4'>Alpha Lipoic Acid (ALA) is a potent antioxidant that protects cells from oxidative stress and helps regenerate other antioxidants like vitamins C and E. It supports nerve health, improves insulin sensitivity, and is often used for anti-aging purposes. This is a great option for those managing neuropathy, diabetes, or chronic fatigue.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Blood sugar regulation</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Nerve pain and inflammation</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Anti-aging</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Amino Acid Blend</h3>
+            <p class='text-gray-600 mb-4'>This blend of essential amino acids supports muscle repair, improves endurance, and enhances fat metabolism. It’s popular among athletes, those recovering from surgery, or anyone looking to improve overall physical performance. Regular supplementation may also improve focus and reduce muscle fatigue.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Muscle growth</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Post-workout recovery</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Fat metabolism</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Anti-nausea / Zofran</h3>
+            <p class='text-gray-600 mb-4'>Zofran is a prescription anti-nausea medication commonly used in hospitals and IV therapy for fast relief from nausea and vomiting. It’s ideal for clients recovering from illness, hangovers, migraines, or post-travel fatigue. Zofran works by blocking chemicals in the brain that trigger nausea, offering rapid relief.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Motion sickness</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Hangover recovery</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Post-IV nausea prevention</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Arginine</h3>
+            <p class='text-gray-600 mb-4'>Arginine is a naturally occurring amino acid that boosts nitric oxide production, which helps improve blood flow and circulation. Often used for cardiovascular health, it also supports muscle recovery and enhances libido in both men and women. Recommended for individuals experiencing fatigue, poor circulation, or low libido.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Improved circulation</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Heart health</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Libido support</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Benadryl</h3>
+            <p class='text-gray-600 mb-4'>Benadryl (Diphenhydramine) is an antihistamine used to relieve allergy symptoms such as itching, sneezing, and runny nose. It is also effective in treating motion sickness, nausea, and insomnia. When administered through an IV, Benadryl provides rapid relief for acute allergic reactions, such as hives, rashes, or swelling, and can be used as a sedative for those needing relaxation or sleep.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Relieves allergy symptoms (itching, sneezing, congestion)</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Reduces nausea and motion sickness</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Promotes relaxation and sleep</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Quick relief for allergic reactions and rashes</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Biotin</h3>
+            <p class='text-gray-600 mb-4'>Biotin is a B vitamin that plays a key role in the health of your hair, skin, and nails. It supports the body’s keratin infrastructure and may help reduce hair thinning and brittle nails. Commonly chosen by clients looking for beauty support or recovering from postpartum or stress-related hair loss.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Hair growth</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Skin health</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Nail strength</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Dexamethasone</h3>
+            <p class='text-gray-600 mb-4'>Dexamethasone is a corticosteroid medication that helps reduce inflammation and treat a variety of conditions, including allergies, arthritis, skin disorders, and autoimmune diseases. It is effective in managing severe inflammation, reducing swelling, and controlling pain. This IV is often used in combination with other treatments for faster recovery or in cases of severe flare-ups or allergic reactions.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Reduces inflammation</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Relieves pain and swelling</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Manages allergic reactions</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Used for autoimmune conditions and severe flare-ups</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Glutathione</h3>
+            <p class='text-gray-600 mb-4'>Glutathione is a powerful antioxidant naturally produced in the body that supports detoxification, cellular repair, and skin clarity. It&#x27;s often used for liver support, immune strengthening, and overall wellness. Clients looking to improve skin tone, fight oxidative stress, or recover from illness frequently request this injection.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Liver health</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Immune support</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Skin clarity</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Hydroxocobalamin B12</h3>
+            <p class='text-gray-600 mb-4'>Hydroxocobalamin B12 is a slow-release form of B12 that stays active in the system longer than other types. It supports energy, red blood cell production, and neurological health. Often recommended for those with chronic fatigue, vegan diets, or absorption issues, it&#x27;s also helpful in managing B12 deficiency symptoms.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Chronic fatigue</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Neuropathy</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Mental clarity</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Kenalog</h3>
+            <p class='text-gray-600 mb-4'>Kenalog is a corticosteroid injection used to reduce inflammation and manage a variety of conditions such as allergies, arthritis, and skin disorders. It is particularly effective in reducing swelling, redness, and pain. This IV is typically used for those with chronic inflammatory conditions, acute flare-ups, or as part of a broader treatment plan to manage autoimmune or allergic reactions.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Inflammation reduction</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Pain and swelling relief</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Allergic reaction management</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Chronic condition flare-up control</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>L-Carnitine</h3>
+            <p class='text-gray-600 mb-4'>L-Carnitine is an amino acid that helps transport fatty acids into cells to be used for energy. It supports metabolism, endurance, and exercise recovery, making it a favorite among those with active lifestyles or weight loss goals. It may also benefit heart and brain function.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Fat metabolism</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Energy boost</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Exercise recovery</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>L-Taurine</h3>
+            <p class='text-gray-600 mb-4'>L-Taurine is an amino acid that plays a key role in cardiovascular function, hydration, and nervous system regulation. It’s especially helpful for clients experiencing fatigue, dehydration, or stress-related tension. Often added to IVs for athletes or those seeking enhanced focus and stamina.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Cardiovascular support</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Hydration</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Mental performance</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Lipo-C</h3>
+            <p class='text-gray-600 mb-4'>Lipo-C (Lipoic Acid + Vitamin C) is a powerful fat-burning and antioxidant infusion that helps improve metabolism, detoxify the body, and promote fat loss. The combination of Lipoic Acid and Vitamin C boosts energy, supports immune function, and assists with healthy weight management. It’s ideal for individuals looking to accelerate their fat loss, improve skin elasticity, or recover from a sluggish metabolism.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Fat metabolism support</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Antioxidant protection</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Boosts energy and immunity</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Supports healthy weight loss</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Methylcobalamin B12</h3>
+            <p class='text-gray-600 mb-4'>Methylcobalamin B12 is the most bioavailable form of B12, ideal for supporting nerve function and brain health. It’s quickly absorbed and often used to combat fatigue, brain fog, and memory issues. This is a preferred choice for individuals with neurological concerns or those needing fast B12 replenishment.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Brain fog</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Energy boost</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Neurological health</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Mineral Blend</h3>
+            <p class='text-gray-600 mb-4'>The mineral blend is designed to restore key electrolytes and minerals lost through sweat, dehydration, or illness. It supports muscle function, hydration, and nutrient balance. Ideal for athletes, those recovering from illness, or clients feeling depleted from heat exposure or travel.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Electrolyte balance</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Muscle cramps</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Post-workout recovery</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>NAD+</h3>
+            <p class='text-gray-600 mb-4'>NAD+ (Nicotinamide Adenine Dinucleotide) is a coenzyme critical for cellular energy and repair. It helps improve mental clarity, stamina, and mitochondrial function. Frequently requested for anti-aging, burnout recovery, or cognitive performance, NAD+ is popular among high-achieving professionals and wellness-focused individuals.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Fatigue</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Brain health</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Anti-aging</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Pepcid</h3>
+            <p class='text-gray-600 mb-4'>Pepcid (famotidine) is a histamine-2 blocker that helps reduce stomach acid production. It is often used to relieve symptoms of acid reflux, heartburn, and indigestion. This is a helpful add-on for clients prone to GI upset, especially after certain medications or IV treatments.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Heartburn</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Upset stomach</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Acid reflux</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Skinny Shot</h3>
+            <p class='text-gray-600 mb-4'>The Skinny Shot is a lipotropic injection designed to support fat loss and energy. It typically contains a blend of B vitamins and amino acids that help metabolize fat and reduce appetite. Great for clients with weight loss goals, sluggish metabolism, or energy dips throughout the day.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Weight management</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Fat metabolism</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Energy boost</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Toradol</h3>
+            <p class='text-gray-600 mb-4'>Toradol (ketorolac) is a strong, non-steroidal anti-inflammatory medication (NSAID) used for short-term pain relief. It helps reduce inflammation, swelling, and discomfort quickly. Ideal for clients experiencing migraines, back pain, muscle soreness, or joint aches.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Muscle pain</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Joint aches</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Injury recovery</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Tri-Immune: Vitamin C, Zinc, Glutathione</h3>
+            <p class='text-gray-600 mb-4'>Tri-Immune is a powerhouse blend of Vitamin C, Zinc, and Glutathione formulated to strengthen immune function. It supports antioxidant defense, wound healing, and cellular protection. This blend is popular during cold and flu season, post-travel, or anytime your immune system needs a boost.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Immune support</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Illness prevention</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Post-illness recovery</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Vitamin B Complex (B1, B2, B3, B5, B6)</h3>
+            <p class='text-gray-600 mb-4'>Vitamin B Complex includes B1, B2, B3, B5, and B6—each vital for energy production, nervous system function, and metabolic efficiency. This blend helps fight fatigue, regulate mood, and improve hair and skin health. It’s a popular option for those under stress, with nutrient deficiencies, or seeking an energy boost without caffeine.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Fatigue</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Nervous system support</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Metabolic health</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Vitamin B12</h3>
+            <p class='text-gray-600 mb-4'>Vitamin B12 is essential for neurological function, red blood cell formation, and DNA synthesis. It&#x27;s especially beneficial for individuals with fatigue, vegan or vegetarian diets, or difficulty absorbing nutrients. Injections provide a fast, effective way to restore levels and support mental clarity and energy.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Fatigue</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Brain fog</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Low B12 levels</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Vitamin B6</h3>
+            <p class='text-gray-600 mb-4'>Vitamin B6 supports brain development and immune function while also playing a role in mood regulation and hormone balance. It is often recommended for individuals experiencing PMS symptoms, low energy, or frequent illness. Regular supplementation may also aid in reducing inflammation and improving sleep quality.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Hormonal balance</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Nausea relief</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Immune health</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Vitamin D</h3>
+            <p class='text-gray-600 mb-4'>Vitamin D plays a critical role in bone strength, immune regulation, and mood balance. Many adults are deficient without realizing it, especially those who spend limited time in the sun. This injection is perfect for anyone with low energy, weakened immunity, or signs of seasonal affective disorder.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Vitamin D deficiency</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Immune health</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Mood support</span></li>
+            </ul>
+        </article>
+    
+        <article class='service-card bg-white rounded-2xl p-7 border border-gray-100'>
+            <h3 class='font-display text-2xl font-semibold text-hydr8-900 mb-3'>Zinc</h3>
+            <p class='text-gray-600 mb-4'>Zinc is a trace mineral essential for immune defense, wound healing, and cellular function. It helps shorten the duration of colds, fights inflammation, and supports healthy skin. Ideal for clients during flu season or those recovering from illness, skin issues, or frequent infections.</p>
+            <ul class='space-y-2'>
+                <li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Cold and flu prevention</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Skin healing</span></li><li class='text-sm text-gray-700 flex items-start gap-2'><span class='text-hydr8-400 mt-1'>•</span><span>Immune boost</span></li>
+            </ul>
+        </article>
+    
+    </section>
+</div>
+    </main>
+
+    <footer class="bg-hydr8-800 text-white pt-16 pb-8 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <span class='text-2xl font-bold tracking-tight'><span class='text-hydr8-400'>HYDR8</span><span class='text-hydr8-900'>AZ</span></span>
+                    <p class="text-sm text-white/50 leading-relaxed mt-4">Premier IV therapy and medspa services in Lake Havasu City, Arizona. Mobile IVs delivered anywhere in Havasu.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-white/70 mb-4">Contact Us</h4>
+                    <div class="space-y-3 text-sm text-white/50">
+                        <p>205 English Village<br>1440 McCulloch Blvd N<br>Lake Havasu City, AZ 86403</p>
+                        <p><a href="tel:9287337776" class="hover:text-white transition-colors">(928) 733-7776</a></p>
+                        <p><a href="mailto:Hydr8AZ@gmail.com" class="hover:text-white transition-colors">Hydr8AZ@gmail.com</a></p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-white/70 mb-4">Quick Links</h4>
+                    <div class="space-y-2 text-sm">
+                        <a href="iv-therapy-options.html" class="block text-white/50 hover:text-white transition-colors">IV Therapy Options</a>
+                        <a href="services/alma-opus-plasma-skin-rejuvenation.html" class="block text-white/50 hover:text-white transition-colors">MedSpa Services</a>
+                        <a href="help-me-choose.html" class="block text-white/50 hover:text-white transition-colors">Help Me Choose</a>
+                        <a href="about.html" class="block text-white/50 hover:text-white transition-colors">About Us</a>
+                        <a href="contact.html" class="block text-white/50 hover:text-white transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-white/70 mb-4">Hours</h4>
+                    <div class="space-y-2 text-sm text-white/50">
+                        <p><span class="text-white/70">Mobile IVs:</span> 7am – 7pm Daily</p>
+                        <p><span class="text-white/70">MedSpa:</span> 12pm – 4pm Daily</p>
+                        <p class="text-white/40">After-hours available by appointment</p>
+                    </div>
+                    <div class="flex gap-3 mt-6">
+                        <a href="https://www.facebook.com/Hydr8AZIVs/" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/hydr8az_ivs_and_medspa/" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="https://www.yelp.com/biz/hydr8az-ivs-and-med-spa-lake-havasu-city-2" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.16 12.594l-4.995 1.433c-.96.276-1.74-.8-1.176-1.63l2.998-4.404c.564-.828 1.896-.444 1.896.546v3.51c0 .22-.06.43-.17.612-.11.18-.27.32-.46.4l-.093.033zM13.235 8.818l2.998 4.404c.564.83-.216 1.906-1.176 1.63l-4.995-1.433a1.045 1.045 0 01-.553-.4 1.034 1.034 0 01-.17-.612V8.898c0-.99 1.332-1.374 1.896-.546v.466z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-white/30">© 2026 HYDR8AZ IVs & MedSpa. All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-white/30">
+                    <a href="privacy-policy.html" class="hover:text-white/50 transition-colors">Privacy Policy</a>
+                    <a href="terms-conditions.html" class="hover:text-white/50 transition-colors">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+
+        function openMenu() {
+            mobileMenu.classList.add('open');
+            mobileOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            mobileMenu.classList.remove('open');
+            mobileOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openMenu);
+        mobileMenuClose.addEventListener('click', closeMenu);
+        mobileOverlay.addEventListener('click', closeMenu);
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'shadow-sm');
+                nav.classList.remove('bg-white/80');
+            } else {
+                nav.classList.remove('bg-white/95', 'shadow-sm');
+                nav.classList.add('bg-white/80');
+            }
+        });
+    </script>
+</body>
+</html>
